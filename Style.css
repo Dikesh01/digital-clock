@@ -1,18 +1,283 @@
 *{
     margin: 0;
-    text-decoration: none;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root{
     --white: #fff;
     --black: #000;
+    --red: #fa0606;
+    --darkgrey: #252222;
+    --grey : #645e5e;
+}
+
+.main_container{
+    display: flex;
+    gap: 10vw;
 }
 
 body{
-    /* background-color: var(--black); */
-    background: linear-gradient(red, yellow);
     height: 100vh;
-    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(rgb(4, 1, 41), rgb(7, 47, 48));
 }
 
+#time{
+    display: flex;
+    color: #fff;
+}
+
+#time .circle{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time #sec_Div{
+    position: absolute;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#time .circle .second_svg{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    transform: rotate(270deg);
+}
+
+#time .circle .second_svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+
+#time .circle .second_svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 1069;
+}
+
+.dots{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   z-index: 100;
+}
+
+.dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+}
+
+#time .circle .hr_min{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+} 
+
+#time .circle .hr_min .divClass{
+    position: relative;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr_min .divClass .svgClass{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(270deg);
+}
+
+.hr_min .divClass svg circle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 4;
+    transform: translate(5px, 3px);
+}
+
+.hr_min .divClass .svgClass circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 315;
+}
+
+#hr_div, #min_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.timeZone{
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.timeZone:hover{
+  color: var(--grey);
+}
+
+#time .circle .weather_div{
+    position: relative;
+    bottom: -90px;
+    z-index: 111;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 10px;
+    transition: all 4s;
+}
+
+#time .circle .weather_div .btnClass{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    transition: all .4s;
+    cursor: pointer;
+}
+#time .circle .weather_div .btnClass:hover{
+    scale: 1.2;
+}
+
+.weather_div .displayWeather{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.displayWeather div span{
+    margin-right: 5px;
+}
+
+/* css of stop watch */
+
+#stopWatch{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopWatch .tools{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopWatch .tools .stopWatch_btn{
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    gap: 40px;
+    z-index: 111;
+}
+
+#stopWatch .tools .stopWatch_btn button{
+    background-color: transparent;
+    border: 2px solid var(--grey);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--grey);
+    transition: all .3s;
+}
+
+#stopBtn, #resetBtn{
+    display: none;
+}
+
+#stopWatch .tools .stopWatch_btn button:hover{
+   scale: 1.3;
+   color: var(--white);
+   border: 2px solid var(--white);
+}
+
+#stopWatch svg{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    transform: rotate(270deg);
+}
+
+#stopWatch svg circle{
+    position: absolute;
+    fill: transparent;
+    stroke: var(--black);
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+
+#stopWatch svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 1069;
+}
+
+#stopWatch h2{
+    position: absolute;
+    top: 20%;
+    color: var(--white);
+    transition: all 0.2s;
+    z-index: 111;
+    cursor: pointer;
+}
+
+#stopWatch h2:hover{
+    color: var(--grey);
+
+}
+
+
+/* Adding media query for responsive design */
+
+@media (max-width:700px){
+    .main_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 5vw;
+    }
+}
+ 
