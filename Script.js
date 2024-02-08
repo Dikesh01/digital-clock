@@ -57,7 +57,6 @@ setInterval(()=>{
 // Weather details section
 let temp = document.getElementById("temperature");
 let wind = document.getElementById("windSpeed");
-// let displayWeather = document.getElementsByClassName("displayWeather");
 
 function getLocation(){
     console.log("first");
@@ -99,11 +98,13 @@ let sw_minute = 0;
 let intervalId;
 
 function start() {
+
   intervalId = setInterval(() => {
     sw_miliSecond++;
     if (sw_miliSecond == 100) {
       sw_second++;
       sw_miliSecond = 0;
+      playAudio();
     }
     if (sw_second == 60) {
       sw_minute++;
@@ -139,6 +140,8 @@ function stop() {
   stopBtn.style.display = "none";
   startBtn.style.display = "block";
   resetBtn.style.display = "block";
+
+  pauseAudio();
 }
 
 function reset() {
@@ -154,4 +157,15 @@ function reset() {
   startBtn.style.display = "block";
   stopBtn.style.display = "none";
   resetBtn.style.display = "none";
+
+  pauseAudio();
 }
+
+function playAudio(){
+  document.getElementById("sound").play();
+}
+
+function pauseAudio(){
+  document.getElementById("sound").pause();
+}
+
