@@ -1,4 +1,4 @@
-<h3>Hello guys! I am goind to share with you a simple project i.e.</h3>
+<h3>Hello guys! I am going to share with you a simple project i.e.</h3>
 
 <h1>Digita-Clock</h1>
 

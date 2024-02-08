@@ -59,7 +59,6 @@ let temp = document.getElementById("temperature");
 let wind = document.getElementById("windSpeed");
 
 function getLocation(){
-    console.log("first");
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(fetchApi);
     }
@@ -169,3 +168,4 @@ function pauseAudio(){
   document.getElementById("sound").pause();
 }
 
+ 
