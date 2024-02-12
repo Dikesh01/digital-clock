@@ -27,10 +27,17 @@ body{
     background: linear-gradient(rgb(3, 1, 31), rgb(6, 53, 61));
 }
 
-#date_div{
+.dateClass{
     position: absolute;
     top: 15vh;
 }
+
+.dateClass img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
 
 #time{
     display: flex;
@@ -278,9 +285,9 @@ body{
 
 @media (max-width:1300px){
 
-    #date_div{
+    .dateClass{
         position: absolute;
-        top: 30vh;
+        top: 22vh;
     }
 }
 
@@ -293,7 +300,7 @@ body{
         gap: 5vw;
     }
 
-    #date_div{
+    .dateClass{
         position: absolute;
         top: 4vh;
     }
