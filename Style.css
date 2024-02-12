@@ -276,11 +276,11 @@ body{
 
 /* Adding media query for responsive design */
 
-@media (max-width:1400px){
+@media (max-width:1300px){
 
     #date_div{
         position: absolute;
-        top: 25vh;
+        top: 30vh;
     }
 }
 
