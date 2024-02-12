@@ -27,6 +27,11 @@ body{
     background: linear-gradient(rgb(4, 1, 41), rgb(7, 47, 48));
 }
 
+#date_div{
+    position: absolute;
+    top: 15vh;
+}
+
 #time{
     display: flex;
     color: #fff;
@@ -279,5 +284,11 @@ body{
         padding: 30px;
         gap: 5vw;
     }
+
+    #date_div{
+        position: absolute;
+        top: 6vh;
+    }
 }
+
  

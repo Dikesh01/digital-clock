@@ -1,4 +1,21 @@
+// Current Date, Month, year Implementation
 
+  // taking current timezone function
+const noww = new Date();
+let date_div = document.getElementById("date_div");
+
+const daysArr = ["Mon", "Tue", "Wed", "Thus", "Fri", "Sat", "Sun"]
+const monthsArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+let toDay = daysArr[noww.getDay()-1];
+let month = monthsArr[noww.getMonth()];
+let date = noww.getDate();
+let year = noww.getFullYear();
+
+date_div.innerHTML = toDay + ", " + month + " " + date + ", " + year;
+
+// ----------------------------------------------------------------
+// Clock time implementation
 let second = document.getElementById("second");
 let minute = document.getElementById("minute");
 let hour = document.getElementById("hour");
@@ -8,7 +25,7 @@ let ss = document.getElementById("ss");
 let mm = document.getElementById("mm");
 let hh = document.getElementById("hh");
 
-let sec_dot = document.querySelector(".sec_dot");
+let sec_dot = document.querySelector(".sec_dot")
 let min_dot = document.querySelector(".min_dot");
 let hr_dot = document.querySelector(".hr_dot");
  
