@@ -70,7 +70,7 @@ setInterval(()=>{
 
 })
 
-//
+//-------------------------------------------------------------------------
 // Weather details section
 let temp = document.getElementById("temperature");
 let wind = document.getElementById("windSpeed");
@@ -97,7 +97,7 @@ function getLocation(){
     .catch((msg)=>console.log(msg));
   }
 
-//
+//--------------------------------------------------------------------
 // Stop watch functionalities
 let counter = document.getElementById("counter");
 let sw_ss = document.getElementById("sw_ss");

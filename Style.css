@@ -29,7 +29,12 @@ body{
 
 .dateClass{
     position: absolute;
-    top: 15vh;
+    top: 15vh;  
+    transition: all 0.3s;  
+}
+
+.dateClass:hover{
+    color: var(--grey);    
 }
 
 .dateClass img{
