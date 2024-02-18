@@ -1,13 +1,13 @@
-// Current Date, Month, year Implementation
+// Calender Implementation
 
   // taking current timezone function
 const noww = new Date();
 let date_div = document.getElementById("date_div");
 
-const daysArr = ["Mon", "Tue", "Wed", "Thus", "Fri", "Sat", "Sun"]
+const daysArr = ["Sun", "Mon", "Tue", "Wed", "Thus", "Fri", "Sat"]
 const monthsArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-let toDay = daysArr[noww.getDay()-1];
+let toDay = daysArr[noww.getDay()];
 let month = monthsArr[noww.getMonth()];
 let date = noww.getDate();
 let year = noww.getFullYear();
@@ -71,7 +71,7 @@ setInterval(()=>{
 })
 
 //-------------------------------------------------------------------------
-// Weather details section
+// Weather details implememtation
 let temp = document.getElementById("temperature");
 let wind = document.getElementById("windSpeed");
 
@@ -98,7 +98,7 @@ function getLocation(){
   }
 
 //--------------------------------------------------------------------
-// Stop watch functionalities
+// Stop Watch Implementation
 let counter = document.getElementById("counter");
 let sw_ss = document.getElementById("sw_ss");
 let sw_dot = document.querySelector(".sw_dot");
